@@ -17,10 +17,10 @@ var commentRoute = require('../comment/comment-route');
 var threadRoute = require('../thread/thread-route');
 
 app.set('superSecret', config.secret);
-app.use('/user', userRoute);
-app.use('/community', communityRoute);
-app.use('/comment',commentRoute);
-app.use('/thread',threadRoute);
+app.use('/', userRoute);
+app.use('/', communityRoute);
+app.use('/',commentRoute);
+app.use('/',threadRoute);
 // console.log(app.settings.superSecret);
 app.get('/', (req, res)=>{
   return res.status(200).send('Request sent');

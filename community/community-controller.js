@@ -31,14 +31,13 @@ module.exports.getCommunity = (req, res)=>{
   })
 }
 module.exports.findCommunity = (commName, callback)=>{
-  console.log(commName);
+  //console.log(commName);
   var community = Community.findOne({name: commName}, callback);
 };
-Community.findOne({name: "Artificial Intelligence"}, function(err, res){
-  if(err){
-    console.log(err);
-  }
-  console.log(res);
-});
+// Community.findOne({name: "Artificial Intelligence"}, function(err, res){
+//   if(err){
+//     console.log(err);
+//   }
+//   console.log(res);
 //console.log(demp);
 // console.log(2);
